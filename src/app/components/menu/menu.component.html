@@ -1,0 +1,23 @@
+<button class="menu-toggler" 
+[ngClass]="{'site-menu-showed': showMenu}"
+(click)="toggleMenu()">
+
+</button>
+<div class="menu position-fixed"
+[ngClass]="{'site-menu-show': showMenu}"
+>
+    <ul>
+        <li>
+            <p>Lorem, ipsum.</p>
+        </li>
+        <li>
+            <p>Odio, exercitationem!</p>
+        </li>
+        <li>
+            <p>Aut, magnam!</p>
+        </li>
+        <li>
+            <p>Sed, soluta?</p>
+        </li>
+    </ul>
+</div>

@@ -1,20 +1,22 @@
-<div class="row">
-    <div class="col-12">
-        <h2 class="text-center">
-            Meet The Chefs 
-        </h2>
-    </div>
-
-    <div class="col-md-6 col-12" *ngFor="let chef of chefsList" >
-       
-        <div class="row text-center">
-            <div class="col-12">
-               <img src="{{chef.picture}}" alt=" {{chef.name}}">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center">
+                Meet The Chefs 
+            </h2>
+        </div>
+    
+        <div class="col-md-6 col-12" *ngFor="let chef of chefsList" >
+           
+            <div class="row text-center">
+                <div class="col-12">
+                   <img src="{{chef.picture}}" alt=" {{chef.name}}">
+                </div>
+                <div class="col-12 chef-name"> {{chef.name}}</div>
+                <div class="col-12 chef-sub-name"> {{chef.role}}</div>
+                <div class="col-12 chef-description "> {{chef.description}}</div>
+                <div class="col-12 chef-social"> {{chef.facebook}}</div> 
             </div>
-            <div class="col-12 chef-name"> {{chef.name}}</div>
-            <div class="col-12 chef-sub-name"> {{chef.role}}</div>
-            <div class="col-12 chef-description "> {{chef.description}}</div>
-            <div class="col-12 chef-social"> {{chef.facebook}}</div> 
         </div>
     </div>
 </div>

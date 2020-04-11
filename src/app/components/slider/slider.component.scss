@@ -1,0 +1,30 @@
+.slider {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://colorlib.com/preview/theme/meal/images/slider-1.jpg");
+  background-size: cover;
+  max-width: 100%;
+  overflow: hidden;
+  .slider-content {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    h1 {
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+      font-family: playfair display, serif;
+    }
+    button.slider-content--cta {
+      border: 2px solid #fff;
+      background: 0 0;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
