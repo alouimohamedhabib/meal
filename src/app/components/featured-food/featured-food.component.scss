@@ -1,0 +1,57 @@
+#featureFood {
+  background-color: #f8f9fa;
+
+  .h-400 {
+    height: 400px;
+  }
+  .bg-white {
+    background: #ffffff;
+  }
+  .featureFood-title {
+    margin: 2em 0;
+    font-size: 50px;
+    color: #000;
+    font-family: "Playfair Display", serif;
+
+    .featureFood-title-subtitle {
+      font-size: 20px;
+      font-weight: 300;
+      font-family: roboto, sans-serif;
+    }
+  }
+
+  .featureFood-item {
+    font-family: "Playfair Display", serif;
+
+    .featuredFood-item-img-wrapper {
+      height: 400px;
+    }
+
+    h3 {
+      font-size: 14px;
+      color: #ff7a5c;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+    }
+
+    h4 {
+      line-height: 1.5;
+      font-size: 20px;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .featureFood-item-descriptin {
+      font-family: Roboto, sans-serif;
+      font-size: 20px;
+      line-height: 1.8;
+      font-weight: 300;
+      color: gray;
+    }
+
+    a {
+      display: block;
+      margin-top: 3em;
+    }
+  }
+}

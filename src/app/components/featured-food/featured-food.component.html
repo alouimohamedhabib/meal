@@ -1,37 +1,105 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h2>
-        Find your best food
-      </h2>
-    </div>
-    <div class="col-12">
-      <div class="row">
-        <div class="col-md-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, explicabo.
-          <hr>
+<div class="container-fluid mb-5    pb-5" id="featureFood">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="featureFood-title text-center p5">
+          Find your best food
+          <div class="d-block featureFood-title-subtitle mt-4">
+            Free Website Template For Restaurants Made by Colorlib
+          </div>
+        </h2>
+
+      </div>
+
+      <div class="col-12">
+        <div class="row">
+          <div class="col-8 col">
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <!-- ngfor for the first 2 elements-->
+                  <ng-template ngFor let-item [ngForOf]="featured" let-i="index">
+                    <div *ngIf="i < 2" class="col-md-12 col featureFood-item">
+                      <div class="row" *ngIf="i % 2 != 0">
+                        <div class="col-md-6 text-center   bg-white ">
+                          <div class="flex-column d-flex align-content-center justify-content-center h-100 ">
+
+                            <h3>
+                              {{item.name}}
+                            </h3>
+                            <h4 class="text-uppercase">
+                              {{item.subTitle}}
+                            </h4>
+
+                            <div class="featureFood-item-descriptin">
+                              {{item.description}}
+                            </div>
+                            <a class="text-uppercase">Learn mode => </a>
+                          </div>
+                        </div>
+                        <div class="col-md-6 featuredFood-item-img-wrapper"
+                             style="background-image: url({{item.picture}});">
+                        </div>
+                      </div>
+                      <div class="row" *ngIf="i % 2 == 0">
+                        <div class="col-md-6  featuredFood-item-img-wrapper"
+                             style="background-image: url({{item.picture}});">
+                        </div>
+                        <div class="col-md-6 text-center bg-white ">
+                          <div class="flex-column d-flex align-content-center justify-content-center h-100 ">
+
+                            <h3>
+                              {{item.name}}
+                            </h3>
+                            <h4>
+                              {{item.subTitle}}
+                            </h4>
+
+                            <div class="featureFood-item-descriptin">
+                              {{item.description}}
+                            </div>
+                            <a class="text-uppercase">Learn mode => </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-template>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 col">
+
+            <ng-template ngFor let-item [ngForOf]="featured" let-i="index">
+              <div *ngIf="i > 1" class="featureFood-item">
+                <div class="row">
+                  <div class="col-md-12 featuredFood-item-img-wrapper" style="background-image: url({{item.picture}});"></div>
+                  <div class="col-md-12 text-center bg-white ">
+                    <div class="flex-column d-flex align-content-center justify-content-center h-400 ">
+                      <h3>
+                        {{item.name}}
+                      </h3>
+                      <h4>
+                        {{item.subTitle}}
+                      </h4>
+
+                      <div class="featureFood-item-descriptin">
+                        {{item.description}}
+                      </div>
+                      <a class="text-uppercase">Learn mode => </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+
+
         </div>
-        <div class="col-md-4">
-          Quis quod fugit, ab sequi provident aut dolore modi ad?
-          <hr>
-        </div>
-        <div class="col-md-4">
-          Repellat natus temporibus modi? Facilis, dolorum exercitationem! Quia, sunt accusamus.
-          <hr>
-        </div>
-        <div class="col-md-4">
-          Necessitatibus nulla repudiandae placeat reprehenderit accusamus, et quasi a aperiam?
-          <hr>
-        </div>
-        <div class="col-md-4">
-          Debitis sequi aspernatur facere iste porro eligendi quam ex deserunt?
-          <hr>
-        </div>
-        <div class="col-md-4">
-          Natus modi voluptate eius alias amet voluptatum sequi, aliquid debitis?
-          <hr>
-        </div>
-      </div>  
+      </div>
     </div>
   </div>
 </div>
+
