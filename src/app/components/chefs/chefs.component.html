@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container the-chefs">
     <div class="row">
         <div class="col-12">
             <h2 class="text-center">
@@ -6,16 +6,20 @@
             </h2>
         </div>
     
-        <div class="col-md-6 col-12" *ngFor="let chef of chefsList" >
+        <div class="col-md-6 col-12" id="chef" *ngFor="let chef of chefsList" >
            
             <div class="row text-center">
-                <div class="col-12">
+                <div class="col-12 m-2">
                    <img src="{{chef.picture}}" alt=" {{chef.name}}">
                 </div>
-                <div class="col-12 chef-name"> {{chef.name}}</div>
-                <div class="col-12 chef-sub-name"> {{chef.role}}</div>
+                <div class="col-12 chef-name m-2 "> {{chef.name}}</div>
+                <div class="col-12 chef-sub-name m-2 "> {{chef.role}}</div>
                 <div class="col-12 chef-description "> {{chef.description}}</div>
-                <div class="col-12 chef-social"> {{chef.facebook}}</div> 
+                <div class="col-12 chef-social"> 
+                    <span class="mt-5 pb-5 ml-2 mr-2 d-inline-block">{{chef.facebook}}</span>
+                    <span class="mt-5 pb-5 ml-2 mr-2 d-inline-block">{{chef.twitter}}</span>
+                    <span class="mt-5 pb-5 ml-2 mr-2 d-inline-block">{{chef.instagram}}</span>
+                </div> 
             </div>
         </div>
     </div>

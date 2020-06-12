@@ -1,32 +1,46 @@
-<div class="container">
+<div class="container-fluid mt-5 mb-5" id="outProducts">
+  <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <h2 class="text-center">
-                MENU
-            </h2>
+      <div class="col-md-12">
+        <h2 class="text-center">
+          MENU
+        </h2>
+      </div>
+      <h3 class="col-md-12 text-center">
+        Lorem ipsum dolor sit amet consectetur.
+      </h3>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-12 text-center">
+            <button *ngFor="let categorie of categories">
+              <span (click)="activeTab = categorie">
+                {{ categorie }}
+              </span>
+            </button>
+          </div>
         </div>
-        <div class="col-md-12 text-center">
-            Lorem ipsum dolor sit amet consectetur.
-        </div>
-        <div class="col-md-12">
-            <div *ngFor="let product of our_products">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="{{product.image}}" alt="{{product.name}}">
-                    </div>
-                    <div class="col-md-7">
-                        <h3>
-                            {{product.name}}
-                        </h3>
-                        <p>
-                        {{product.description}}
-                        </p>
-                    </div>
-                    <div class="col">
-                        {{product.price}}$
-                    </div>
-                </div>
+        <div
+          *ngFor="let product of our_products"
+          [ngClass]="{
+            'd-none': (product.categorie | cleanCategorieNames) != activeTab
+          }"
+        >
+          <div class="row">
+            <div class="col-md-3">
+              <img src="{{ product.image }}" alt="{{ product.name }}" />
             </div>
+            <div class="col-md-7">
+              <h3>
+                {{ product.name }}
+              </h3>
+              <p>
+                {{ product.description }}
+              </p>
+            </div>
+            <div class="col">{{ product.price }}$</div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

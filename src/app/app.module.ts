@@ -9,6 +9,7 @@ import { SocialFeedComponent } from './components/social-feed/social-feed.compon
 import { ChefsComponent } from './components/chefs/chefs.component';
 import { OurProductsComponent } from './components/our-products/our-products.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { CleanCategorieNamesPipe } from './pipes/clean-categorie-names.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenuComponent } from './components/menu/menu.component';
     SocialFeedComponent,
     ChefsComponent,
     OurProductsComponent,
-    MenuComponent
+    MenuComponent,
+    CleanCategorieNamesPipe
   ],
   imports: [
     BrowserModule,
