@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <div class="p-5 m-5">
+        <form [formGroup]="myForm">
+          Value: {{ myForm.value | json }}
+
+          <input formControlName="email" />
+          <div  formGroupName="cellPhone">
+            <input formControlName="prefix" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
