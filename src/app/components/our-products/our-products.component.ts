@@ -14,7 +14,6 @@ export class OurProductsComponent implements OnInit {
   ngOnInit(): void {
     // fetch categories
     this.our_products.map((item) => this.categories.add(item.categorie));
-    this.activeTab = Array.from(this.categories)[0]; // pich the first element from the cats. array
-    
+    this.activeTab = Array.from(this.categories)[0];
   }
 }
