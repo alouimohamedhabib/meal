@@ -1,0 +1,55 @@
+<div class="container-fluid mt-5 mb-5" id="outProducts">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center">
+          MENU
+        </h2>
+      </div>
+      <h3 class="col-md-12 text-center">
+        Lorem ipsum dolor sit amet consectetur.
+      </h3>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-12 text-center">
+            <!-- Tabs container -->
+            <div class="tabs-container mb-5">
+              <button
+                *ngFor="let categorie of categories"
+                [ngClass]="{ active: categorie === activeTab }"
+                class="m-2"
+              >
+                <span (click)="activeTab = categorie">
+                  {{ categorie }}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Products cotainer -->
+        <div class="product-container mt-5">
+          <div
+            *ngFor="let product of our_products | async"
+            class="product-item position-relative"
+            [ngClass]="{
+              'd-none': (product.categorie | cleanCategorieNames) != activeTab
+            }"
+          >
+            <div class="d-flex">
+              <img src="{{ product.image }}" alt="{{ product.name }}" />
+              <div class="product-details">
+                <h3>
+                  <a>{{ product.name }}</a>
+                </h3>
+                <p>
+                  {{ product.description }}
+                </p>
+                <div class="price">{{ product.price }}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
