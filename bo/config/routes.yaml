@@ -1,0 +1,3 @@
+API-products:
+  path: /products
+  controller: App\Controller\MealController::products
